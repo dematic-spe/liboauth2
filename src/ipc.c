@@ -50,8 +50,9 @@ static char *_oauth2_ipc_get_name(oauth2_log_t *log, const char *type,
 	rv = oauth2_mem_alloc(_OAUTH2_IPC_NAME_MAX);
 	// oauth2_snprintf(rv, _OAUTH2_IPC_NAME_MAX, "/zzo-%s-%ld.%p", type,
 	//		(long int)getpid(), ptr);
-	oauth2_snprintf(rv, _OAUTH2_IPC_NAME_MAX, "/zzo-%s-%p", type, ptr ? ptr : 0);
-	//oauth2_snprintf(rv, _OAUTH2_IPC_NAME_MAX, "/zzo-%s", type);
+	oauth2_snprintf(rv, _OAUTH2_IPC_NAME_MAX, "/zzo-%s-%p", type,
+			ptr ? ptr : 0);
+	// oauth2_snprintf(rv, _OAUTH2_IPC_NAME_MAX, "/zzo-%s", type);
 	return rv;
 }
 
